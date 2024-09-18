@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGC Freeroam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">MGC</div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link"><i class="material-icons">home</i> HOME</a>
+                <a href="forum.html" class="nav-link"><i class="material-icons">forum</i> FORUM</a>
+                <a href="screenshots.html" class="nav-link"><i class="material-icons">image</i> SOCIAL</a>
+                <a href="https://discord.gg/PCWKC5QspW" class="nav-link"><i class="material-icons">chat</i> DISCORD</a>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-button" onclick="showAuthBox('login')">Login</button>
+                <button class="register-button" onclick="showAuthBox('register')">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="pagewrap">
+        <div class="scroll-container">
+            <h1>Welcome to MGC Freeroam</h1>
+            <p>Explore a free world where your creativity and fun come first! Join us in an exciting open world and unleash your imagination!</p>
+        </div>
+    </div>
+
+    <!-- Auth box -->
+    <div id="auth-box" class="auth-box">
+        <span class="close-button" onclick="hideAuthBox()">&times;</span>
+        <div id="auth-form">
+            <!-- Dynamic form content will be injected here -->
+        </div>
+        <div id="auth-message" class="auth-message"></div>
+    </div>
+    <div id="overlay" class="overlay" onclick="hideAuthBox()"></div>
+    
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
